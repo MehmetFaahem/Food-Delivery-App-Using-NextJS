@@ -14,7 +14,7 @@ function Analytics() {
     const [selectedFoods, setSelectedFoods] = useState([])
 
     const deleteFood = async (foodID) => {
-        const response = await fetch(`http://localhost:3001/api/catchedData`, {
+        const response = await fetch(`https://kheyedekhen.vercel.app/api/catchedData`, {
             method: 'DELETE',
             body: JSON.stringify({ foodID }),
             headers: {
@@ -33,7 +33,7 @@ function Analytics() {
 
     useEffect(() => {
 
-        axios.get('http://localhost:3001/api/catchedData')
+        axios.get('https://kheyedekhen.vercel.app/api/catchedData')
             .then(function (response) {
                 setSelectedFoods(response.data)
             })
