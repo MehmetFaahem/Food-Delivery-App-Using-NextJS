@@ -31,7 +31,7 @@ export default async function messageExamples(req, res) {
             "mongodb+srv://fahemvai:fahemvai@fooding.qvvsa6g.mongodb.net/fooding?retryWrites=true&w=majority");
         const db = client.db();
         const yourCollection = db.collection("selectedFoods");
-        const result = yourCollection.insertOne(newFood);
+        const result = await yourCollection.insertOne(newFood);
         console.log(result);
         client.close();
         res.status(201).json({ message: "Data inserted successfully!" });
