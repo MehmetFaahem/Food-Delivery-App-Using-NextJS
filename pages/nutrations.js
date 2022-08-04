@@ -11,7 +11,7 @@ export default function Nutration() {
             <Container sx={{
                 p: 7,
                 mt: 2,
-                pb: 100
+                pb: 50
             }}>
                 <DenseTable />
                 <Link href='/foods'>
