@@ -67,6 +67,7 @@ export default function MultiActionAreaCard() {
     const [passer, setPasser] = React.useState(false)
 
     const handleModal = async () => {
+        setShow(true)
         const response = await fetch('https://kheyedekhen.vercel.app/api/catchedData', {
             method: 'POST',
             body: JSON.stringify({ food, selectedLocation }),
@@ -77,7 +78,6 @@ export default function MultiActionAreaCard() {
         const data = await response.json()
         console.log(data)
         setOpen(false)
-        setShow(true)
     }
 
     const handleClose = () => {
