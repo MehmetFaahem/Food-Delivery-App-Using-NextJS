@@ -33,7 +33,7 @@ export default function MultiActionAreaCard() {
     const [drinks, setDrinks] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/api/foodsData')
+        axios.get('https://kheyedekhen.vercel.app/api/foodsData')
             .then(function (response) {
                 setFoods(response.data)
             })
@@ -43,7 +43,7 @@ export default function MultiActionAreaCard() {
     }, [])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/api/drinksData')
+        axios.get('https://kheyedekhen.vercel.app/api/drinksData')
             .then(function (response) {
                 setDrinks(response.data)
             })
@@ -67,7 +67,7 @@ export default function MultiActionAreaCard() {
     const [passer, setPasser] = React.useState(false)
 
     const handleModal = async () => {
-        const response = await fetch('http://localhost:3001/api/catchedData', {
+        const response = await fetch('https://kheyedekhen.vercel.app/api/catchedData', {
             method: 'POST',
             body: JSON.stringify({ food, selectedLocation }),
             headers: {
